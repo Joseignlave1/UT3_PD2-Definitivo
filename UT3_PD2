@@ -1,0 +1,56 @@
+UT3_TA1:
+
+Tipos de datos:
+
+Nombre = String;
+
+Código = String;
+
+Precio Unitario = float;
+
+
+Descripción:
+
+Iteramos sobre la lista de productos, verificando que la etiqueta de producto el cuál queremos agregar no coincida con
+ninguno de los productos ya existentes, si no coincide, entonces hacemos que el atributo siguiente de el último elemento
+apunte a el nuevo elemento, que al principio apuntaba a nulo, que queremos crear, añadiendolo así al final de la ListaEnlazada
+Para este algoritmo se da por sentado de qué el artículo se va a añadir al final del stock.
+
+Pre condiciones:
+El producto pasado por parámetro no puede ser nulo
+El stock pasado por parámetro no puede ser negativo
+El stock pasado por parámetro no puede ser nulo.
+
+Post condiciones:
+
+La cantidad de elementos en la lista Enlazada debe de haber aumentado si el producto no estaba anteriormente en
+el supermercado
+
+
+Pseudocódigo:
+
+añadirStock(Producto producto, int stock)
+productoActual = primero;
+
+Mientras productoActual <> nulo HACER
+Si productoActual.etiqueta = producto.etiqueta
+   productoActual.stock = stock
+SINO 
+   productoActual.siguiente = producto;
+   producto.stock = stock
+Fin Si
+
+productoActual = productoActual.siguiente
+Fin Mientras
+
+
+
+UT3_PD2:
+
+2)Creo que no hay aspectos de la fase que se aparten a las recomendaciónes
+
+4)Situaciones:
+  Quiero listar un producto el cual es nulo = resuelve
+  Quiero listar un producto con un stock que es nulo = resuelve
+  Quiero dar de alta stock a un articulo ya existe = resuelve
+  Quiero dar de alta un producto nuevo y añadirle stock = resuelve
